@@ -1,13 +1,17 @@
-import http from "http";
+import express from "express";
 
-const server = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.writeHead(201, "OK", { "Content-type": "text/html" });
-    res.write(`<h1> Hello from server</h1>`);
-  } else {
-    res.writeHead(404, "BAD", { "Content-type": "text/html" });
-    res.write(`<h1>Not good</h1>`);
+const app = express();
+
+app.get(
+  "/",
+  (req, res, next) => {
+    console.log(`first function`);
+    next();
+  },
+  (req, res) => {
+    console.log("second function");
+    res.send(`<h1>get</h1>`);
   }
-});
+);
 
-server.listen(8000, () => console.log(`Server is running`));
+app.listen(8000, () => console.log(`hello`));
