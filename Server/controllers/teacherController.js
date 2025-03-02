@@ -1,12 +1,12 @@
-export const getTeachers = async () => {
-  console.log("Teachers");
+export const getTeachers = async (req, res) => {
+  res.send(`All teachers`);
 };
-export const createTeachers = async () => {
-  console.log("Create teachers");
+export const createTeachers = async (req, res) => {
+  res.send(`create teachers`);
 };
-export const updateTeachers = async () => {
-  console.log("Update teachers");
+export const updateTeachers = async (req, res) => {
+  res.send(`update teachers`);
 };
-export const removeTeachers = async () => {
-  console.log("remove Teachers");
+export const removeTeachers = async (req, res) => {
+  res.send(`remove teachers`);
 };

@@ -10,21 +10,9 @@ import {
 
 // Routes
 route
-  .get("/", (req, res) => {
-    getTeachers();
-    res.send("All teacher");
-  })
-  .post("/create", (req, res) => {
-    createTeachers();
-    res.send("Create teacher");
-  })
-  .put("/update", (req, res) => {
-    updateTeachers();
-    res.send("Edit teacher");
-  })
-  .delete("/delete", (req, res) => {
-    removeTeachers();
-    res.send("Delete teacher");
-  });
+  .get("/", getTeachers)
+  .post("/create", createTeachers)
+  .put("/update", updateTeachers)
+  .delete("/delete", removeTeachers);
 
 export default route;
