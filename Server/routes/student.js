@@ -22,4 +22,9 @@ route.delete("/delete/:id", (req, res) => {
   const { id } = req.params;
   res.send(id);
 });
+
+route.get("/:grade/:id", (req, res) => {
+  const { grade, id } = req.params;
+  res.send(`${grade}, ${id}`);
+});
 export default route;
