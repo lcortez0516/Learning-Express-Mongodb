@@ -1,5 +1,4 @@
 import express from "express";
-
 const route = express.Router();
 
 // Routes
@@ -23,8 +22,4 @@ route.delete("/delete/:id", (req, res) => {
   res.send(id);
 });
 
-route.get("/:grade/:id", (req, res) => {
-  const { grade, id } = req.params;
-  res.send(`${grade}, ${id}`);
-});
 export default route;
