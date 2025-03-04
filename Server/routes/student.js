@@ -21,5 +21,9 @@ route.delete("/delete/:id", (req, res) => {
   const { id } = req.params;
   res.send(id);
 });
+route.put("/update/:id", (req, res) => {
+  const { id } = req.params;
+  res.send(id);
+});
 
 export default route;
