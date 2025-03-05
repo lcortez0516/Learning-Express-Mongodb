@@ -2,7 +2,7 @@ import express from "express";
 import student from "./routes/student.js";
 import teacher from "./routes/teacher.js";
 import { dbConnect } from "./database/dbConnect.js";
-import { createDoc } from "./models/Movies.js";
+import { deleteDoc } from "./models/Movies.js";
 
 
 // server
@@ -17,7 +17,7 @@ server.use("/student", student);
 server.use("/teacher", teacher);
 
 //createDoc
-createDoc()
+deleteDoc()
 
 // app.param - checks if param is present
 // server.param("id", (req, res, next, id) => {
