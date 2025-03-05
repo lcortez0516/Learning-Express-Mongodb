@@ -8,7 +8,7 @@ import {
   removeTeachers,
 } from "../controllers/teacherController.js";
 
-// Routes
+// Routes w/controllers
 route
   .get("/", getTeachers)
   .post("/create", createTeachers)
