@@ -17,7 +17,7 @@ server.use("/student", student);
 server.use("/teacher", teacher);
 
 //createDoc
-deleteDoc()
+// deleteDoc()
 
 // app.param - checks if param is present
 // server.param("id", (req, res, next, id) => {
