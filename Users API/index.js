@@ -1,6 +1,8 @@
 // imports
-import express from 'express'
 import dotenv from 'dotenv'
+dotenv.config()
+
+import express from 'express'
 import authRoutes from './routes/authRoutes.js'
 import homeRoutes from './routes/homeRoutes.js'
 import adminRoutes from './routes/adminRoutes.js'
@@ -8,7 +10,6 @@ import imageRoutes from './routes/imageRoutes.js'
 // database
 import connectDb from './config/db.js'
 
-dotenv.config()
 const PORT = process.env.PORT
 const app = express()
 connectDb()
